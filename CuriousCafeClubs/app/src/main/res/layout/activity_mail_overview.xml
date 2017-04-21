@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameMenu$MailOverview">
+    android:fillViewport="true">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleUnread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/unread" />
+
+        <com.ccc_game.curiouscafeclubs.ExpandableHeightGridView
+            android:id="@+id/gridUnread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:isScrollContainer="false"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="20dp"
+            />
+
+        <TextView
+            android:id="@+id/titleRead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/read" />
+
+        <com.ccc_game.curiouscafeclubs.ExpandableHeightGridView
+            android:id="@+id/gridRead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="false"
+            android:numColumns="auto_fit" />
+
+        <TextView
+            android:id="@+id/titleSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/successfull" />
+
+        <com.ccc_game.curiouscafeclubs.ExpandableHeightGridView
+            android:id="@+id/gridSuccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="false"
+            android:numColumns="auto_fit" />
+
+        <TextView
+            android:id="@+id/titleFailed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/failed" />
+
+        <com.ccc_game.curiouscafeclubs.ExpandableHeightGridView
+            android:id="@+id/gridFailed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="false"
+            android:numColumns="auto_fit" />
+
+    </LinearLayout>
+</ScrollView>

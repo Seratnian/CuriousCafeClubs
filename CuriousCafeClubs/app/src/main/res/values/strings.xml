@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Curious Cafe Clubs</string>
 
-    <!-- Strings related to login -->
+    <!-- Strings related to Login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Passwort</string>
     <string name="action_sign_in">Anmelden</string>
@@ -33,4 +33,10 @@
     <string name="guestList">Gästeliste</string>
     <string name="photos">Fotos</string>
     <string name="title_activity_game_menu">GameMenu</string>
+
+    <!-- The Mail Screens -->
+    <string name="unread">ungelesen</string>
+    <string name="read">gelesen</string>
+    <string name="successfull">erfolgreich</string>
+    <string name="failed">gescheitert</string>
 </resources>
