@@ -36,5 +36,14 @@ public class GameMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button chatroomsButton = (Button) findViewById(R.id.chatroomsButton);
+        mailsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(currentView, Calender.class);
+                startActivity(intent);
+            }
+        });
     }
 }

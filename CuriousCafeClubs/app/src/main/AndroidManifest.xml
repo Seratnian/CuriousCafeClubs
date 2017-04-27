@@ -32,7 +32,8 @@
             android:label="@string/title_activity_game_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MailOverview" />
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".Calender"></activity>
     </application>
 
 </manifest>
