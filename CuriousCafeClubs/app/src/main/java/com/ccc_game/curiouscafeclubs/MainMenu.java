@@ -15,11 +15,11 @@ public class MainMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.ccc_game.curiouscafeclubs.R.layout.activity_main_menu);
-        Toolbar toolbar = (Toolbar) findViewById(com.ccc_game.curiouscafeclubs.R.id.toolbar);
+        setContentView(R.layout.activity_main_menu);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(com.ccc_game.curiouscafeclubs.R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,11 +28,20 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        Button storyButton = (Button) findViewById(com.ccc_game.curiouscafeclubs.R.id.storyButton);
+        Button storyButton = (Button) findViewById(R.id.storyButton);
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(currentView, GameMenu.class);
+                startActivity(intent);
+            }
+        });
+
+        Button settingsbutton = (Button) findViewById(R.id.settignsButton);
+        storyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(currentView, Settings.class);
                 startActivity(intent);
             }
         });

@@ -31,8 +31,8 @@
             android:name=".GameMenu"
             android:label="@string/title_activity_game_menu"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".GameMenu$MailOverview" />
-        <activity android:name=".MailOverview"></activity>
+        <activity android:name=".MailOverview" />
+        <activity android:name=".Settings"></activity>
     </application>
 
 </manifest>

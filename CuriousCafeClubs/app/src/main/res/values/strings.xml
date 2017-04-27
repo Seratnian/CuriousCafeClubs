@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Curious Cafe Clubs</string>
 
+    <!-- variable Strings -->
+    <string name="nickName">Nickname</string>
+
+    <!-- general -->
+    <string name="change">ändern</string>
+    <string name="configure">konfigurieren</string>
+    <string name="set">anpassen</string>
+
     <!-- Strings related to Login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Passwort</string>
@@ -39,4 +47,49 @@
     <string name="read">gelesen</string>
     <string name="successfull">erfolgreich</string>
     <string name="failed">gescheitert</string>
+
+    <!-- The Settings Screen -->
+    <string name="volume">Lautstärke</string>
+    <string name="pushMessage">Push-Nachrichten</string>
+    <array name="pushMessages">
+        <item>keine</item>
+        <item>lautlos</item>
+        <item>alle</item>
+    </array>
+    <string name="timeZone">Zeitzone</string>
+    <array name="timeZones">
+        <item>-12:00</item>
+        <item>-11:00</item>
+        <item>-10:00</item>
+        <item>-9:00</item>
+        <item>-8:00</item>
+        <item>-7:00</item>
+        <item>-6:00</item>
+        <item>-5:00</item>
+        <item>-4:00</item>
+        <item>-3:00</item>
+        <item>-2:00</item>
+        <item>-1:00</item>
+        <item>0:00</item>
+        <item>1:00</item>
+        <item>2:00</item>
+        <item>3:00</item>
+        <item>4:00</item>
+        <item>5:00</item>
+        <item>6:00</item>
+        <item>7:00</item>
+        <item>8:00</item>
+        <item>9:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+    </array>
+    <string name="ringtones">Klingeltöne</string>
+    <array name="ringtones">
+        <item>bimmel</item>
+        <item>bammel</item>
+        <item>bumm</item>
+    </array>
+    <string name="account">Account</string>
+
 </resources>
