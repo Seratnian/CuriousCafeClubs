@@ -91,5 +91,6 @@
         <item>bumm</item>
     </array>
     <string name="account">Account</string>
+    <string name="autoLI">automatische Anmeldung</string>
 
 </resources>
