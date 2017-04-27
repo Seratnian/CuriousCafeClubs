@@ -8,6 +8,13 @@
     <string name="time_03">15 Uhr</string>
     <string name="time_04">17 Uhr</string>
     <string name="visual">Visual Story</string>
+    <string name="chat_01">Blabla...</string>
+    <string name="chat_02">Waaassss????</string>
+    <string name="chat_03">Und du so?</string>
+    <string name="chat_04">;)</string>
+    <string name="chat_05">Jo Diggah!</string>
+    <string name="chat_06">hast voll recht!</string>
+    <string name="chat_07">nee,ne</string>
 
     <!-- general -->
     <string name="change">ändern</string>
@@ -97,5 +104,8 @@
     </array>
     <string name="account">Account</string>
     <string name="autoLI">automatische Anmeldung</string>
+
+    <!-- Chat -->
+    <string name="send">senden</string>
 
 </resources>
