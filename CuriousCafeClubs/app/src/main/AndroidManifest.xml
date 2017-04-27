@@ -33,7 +33,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MailOverview" />
         <activity android:name=".Settings" />
-        <activity android:name=".Calender"></activity>
+        <activity android:name=".Calender" />
+        <activity android:name=".Chatrooms" />
+        <activity android:name=".Chat"></activity>
     </application>
 
 </manifest>

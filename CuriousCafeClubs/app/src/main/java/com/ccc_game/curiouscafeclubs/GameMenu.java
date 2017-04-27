@@ -38,7 +38,7 @@ public class GameMenu extends AppCompatActivity {
         });
 
         Button chatroomsButton = (Button) findViewById(R.id.chatroomsButton);
-        mailsButton.setOnClickListener(new View.OnClickListener() {
+        chatroomsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(currentView, Calender.class);

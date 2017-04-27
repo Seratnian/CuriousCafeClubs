@@ -9,61 +9,61 @@
     android:columnCount="3">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/day_01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_01" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/day_02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_02" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/day_03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_03" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/day_04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_04" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/day_05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_05" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/day_06"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_06" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/day_07"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_07" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/day_08"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_08" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/day_09"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_09" />
 
     <ImageButton
-        android:id="@+id/imageButton11"
+        android:id="@+id/day_p"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/day_p" />

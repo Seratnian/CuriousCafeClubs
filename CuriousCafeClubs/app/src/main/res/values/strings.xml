@@ -3,6 +3,11 @@
 
     <!-- variable Strings -->
     <string name="nickName">Nickname</string>
+    <string name="time_01">8 Uhr</string>
+    <string name="time_02">11 Uhr</string>
+    <string name="time_03">15 Uhr</string>
+    <string name="time_04">17 Uhr</string>
+    <string name="visual">Visual Story</string>
 
     <!-- general -->
     <string name="change">ändern</string>

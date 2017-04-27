@@ -38,7 +38,7 @@ public class MainMenu extends AppCompatActivity {
         });
 
         Button settingsbutton = (Button) findViewById(R.id.settignsButton);
-        storyButton.setOnClickListener(new View.OnClickListener() {
+        settingsbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(currentView, Settings.class);
