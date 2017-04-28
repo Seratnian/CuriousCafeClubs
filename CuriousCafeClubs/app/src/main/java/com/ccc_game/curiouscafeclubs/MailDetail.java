@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MailDetail extends AppCompatActivity {
+    MailDetail currentView = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -45,5 +45,14 @@ public class GameMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button phoneButton = (Button) findViewById(R.id.phoneButton);
+        phoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(currentView, PhoneCalls.class);
+                startActivity(intent);
+            }
+        });
     }
 }

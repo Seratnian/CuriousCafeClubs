@@ -37,7 +37,11 @@
         <activity android:name=".Chatrooms" />
         <activity android:name=".Chat" />
         <activity android:name=".VisualNovel" />
-        <activity android:name=".MailDetail"></activity>
+        <activity android:name=".MailDetail" />
+        <activity
+            android:name=".PhoneCalls"
+            android:label="@string/title_activity_phone_calls"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
