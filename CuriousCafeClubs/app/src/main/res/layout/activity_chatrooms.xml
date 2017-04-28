@@ -53,19 +53,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView2"
+        <Button
+            android:id="@+id/visualNovelButton"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/visual_background"
-            android:gravity="center"
-            android:text="@string/visual"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:text="@string/visual" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
     </LinearLayout>
 

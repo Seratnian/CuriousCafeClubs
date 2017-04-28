@@ -14,11 +14,21 @@ public class Chatrooms extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatrooms);
+
         ImageButton activeChatButton = (ImageButton) findViewById(R.id.activeChatButton);
         activeChatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(currentView, Chat.class);
+                startActivity(intent);
+            }
+        });
+
+        Button visualNovelButton = (Button) findViewById(R.id.visualNovelButton);
+        visualNovelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(currentView, VisualNovel.class);
                 startActivity(intent);
             }
         });

@@ -7,7 +7,7 @@
     <string name="time_02">11 Uhr</string>
     <string name="time_03">15 Uhr</string>
     <string name="time_04">17 Uhr</string>
-    <string name="visual">Visual Story</string>
+    <string name="visual">Visual Novel</string>
     <string name="chat_01">Blabla...</string>
     <string name="chat_02">Waaassss????</string>
     <string name="chat_03">Und du so?</string>
@@ -15,11 +15,16 @@
     <string name="chat_05">Jo Diggah!</string>
     <string name="chat_06">hast voll recht!</string>
     <string name="chat_07">nee,ne</string>
+    <string name="answer_01">Erzähl mir mehr!</string>
+    <string name="answer_02">Das hast du getan?</string>
+    <string name="answer_03">Und was wurde daraus?</string>
+    <string name="answer_04">Jammer nicht rum.</string>
 
     <!-- general -->
     <string name="change">ändern</string>
     <string name="configure">konfigurieren</string>
     <string name="set">anpassen</string>
+    <string name="skip">skip</string>
 
     <!-- Strings related to Login -->
     <string name="prompt_email">Email</string>
