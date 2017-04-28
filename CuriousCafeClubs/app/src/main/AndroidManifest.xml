@@ -36,7 +36,8 @@
         <activity android:name=".Calender" />
         <activity android:name=".Chatrooms" />
         <activity android:name=".Chat" />
-        <activity android:name=".VisualNovel"></activity>
+        <activity android:name=".VisualNovel" />
+        <activity android:name=".MailDetail"></activity>
     </application>
 
 </manifest>

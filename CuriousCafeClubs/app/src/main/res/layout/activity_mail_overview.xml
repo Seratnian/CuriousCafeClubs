@@ -45,7 +45,7 @@
             android:id="@+id/titleSuccess"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/successfull" />
+            android:text="@string/successful" />
 
         <com.ccc_game.curiouscafeclubs.ExpandableHeightGridView
             android:id="@+id/gridSuccess"
