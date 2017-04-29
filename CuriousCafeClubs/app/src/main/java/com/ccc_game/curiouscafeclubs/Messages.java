@@ -17,14 +17,14 @@ public class Messages extends AppCompatActivity {
         // TODO name Buttons according to clubs
         int[] imageButtonIds = { R.id.clubLeaderButton_01, R.id.clubLeaderButton_02, R.id.clubLeaderButton_03, R.id.clubLeaderButton_04 };
         // TODO
-        
+
         for (int imagebuttonId : imageButtonIds)
         {
             ImageButton messagesButton = (ImageButton) findViewById(imagebuttonId);
             messagesButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(currentView, Messages.class);
+                    Intent intent = new Intent(currentView, Chat.class);
                     startActivity(intent);
                 }
             });

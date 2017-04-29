@@ -1,5 +1,6 @@
 package com.ccc_game.curiouscafeclubs;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -23,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class PhoneCalls extends AppCompatActivity {
+    private PhoneCalls currentView = this;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -53,6 +56,23 @@ public class PhoneCalls extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        Button callsButton = (Button) findViewById(R.id.callsButton);
+        callsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                mViewPager.setCurrentItem(0);
+            }
+        });
+        Button contactsButton = (Button) findViewById(R.id.contactsButton);
+        contactsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                mViewPager.setCurrentItem(1);
+            }
+        });
     }
 
 
@@ -137,7 +157,15 @@ public class PhoneCalls extends AppCompatActivity {
 
             for (Contact contact : contacts)
             {
-                layout.addView(contact.getLayout());
+                LinearLayout contactLayout = contact.getLayout();
+                contactLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                    Intent intent = new Intent(getContext(), Messages.class);
+                    startActivity(intent);
+                    }
+                });
+                contactLayout.addView(layout);
             }
 
             return rootView;
