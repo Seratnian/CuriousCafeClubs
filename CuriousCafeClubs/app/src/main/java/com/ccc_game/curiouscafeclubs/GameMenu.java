@@ -72,5 +72,14 @@ public class GameMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button photosButton = (Button) findViewById(R.id.photosButton);
+        photosButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(currentView, Gallery.class);
+                startActivity(intent);
+            }
+        });
     }
 }

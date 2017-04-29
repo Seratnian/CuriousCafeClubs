@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
@@ -18,6 +19,8 @@ public class GuestList extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guest_list);
+
+        final Context context = this;
 
         ArrayList<Contact> contacts_club_01 = new ArrayList<>();
         ArrayList<Contact> contacts_club_02 = new ArrayList<>();
@@ -57,7 +60,8 @@ public class GuestList extends AppCompatActivity {
             GridLayout grid = (GridLayout) findViewById(gridIds[i]);
             for (Contact contact : contacts)
             {
-                grid.addView(contact.getVerticalLayout());
+                LinearLayout layout = contact.getVerticalLayout();
+                grid.addView(layout);
             }
 
         }

@@ -43,7 +43,11 @@
             android:label="@string/title_activity_phone_calls"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Messages" />
-        <activity android:name=".GuestList"></activity>
+        <activity android:name=".GuestList" />
+        <activity
+            android:name=".Gallery"
+            android:label="@string/title_activity_gallery"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
