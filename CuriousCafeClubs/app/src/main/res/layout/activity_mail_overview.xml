@@ -16,17 +16,12 @@
             android:layout_height="wrap_content"
             android:text="@string/unread" />
 
-        <com.ccc_game.curiouscafeclubs.ExpandableHeightGridView
+        <GridLayout
             android:id="@+id/gridUnread"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:horizontalSpacing="2dp"
-            android:isScrollContainer="false"
-            android:numColumns="4"
-            android:stretchMode="columnWidth"
-            android:verticalSpacing="20dp"
-            />
+            android:columnCount="4">
+        </GridLayout>
 
         <TextView
             android:id="@+id/titleRead"
@@ -34,12 +29,12 @@
             android:layout_height="wrap_content"
             android:text="@string/read" />
 
-        <com.ccc_game.curiouscafeclubs.ExpandableHeightGridView
+        <GridLayout
             android:id="@+id/gridRead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:isScrollContainer="false"
-            android:numColumns="auto_fit" />
+            android:columnCount="4">
+        </GridLayout>
 
         <TextView
             android:id="@+id/titleSuccess"
@@ -47,12 +42,12 @@
             android:layout_height="wrap_content"
             android:text="@string/successful" />
 
-        <com.ccc_game.curiouscafeclubs.ExpandableHeightGridView
+        <GridLayout
             android:id="@+id/gridSuccess"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:isScrollContainer="false"
-            android:numColumns="auto_fit" />
+            android:columnCount="4">
+        </GridLayout>
 
         <TextView
             android:id="@+id/titleFailed"
@@ -60,12 +55,12 @@
             android:layout_height="wrap_content"
             android:text="@string/failed" />
 
-        <com.ccc_game.curiouscafeclubs.ExpandableHeightGridView
+        <GridLayout
             android:id="@+id/gridFailed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:isScrollContainer="false"
-            android:numColumns="auto_fit" />
+            android:columnCount="4">
+        </GridLayout>
 
     </LinearLayout>
 </ScrollView>

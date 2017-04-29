@@ -1,12 +1,15 @@
 package com.ccc_game.curiouscafeclubs;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -16,10 +19,7 @@ import java.util.Map;
 public class MailOverview extends AppCompatActivity
 {
     MailOverview currentView = this;
-    List<String> categories;
-    List<String> mailList;
     Map<String, List<String>> mails = new LinkedHashMap<String, List<String>>();
-    ExpandableListView expListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -46,35 +46,34 @@ public class MailOverview extends AppCompatActivity
         // TODO
 
         int[][] images = { unread, read, successful, failed };
+        Context context = this;
+        initChildren(context, (GridLayout) findViewById(R.id.gridUnread), unread);
+        initChildren(context, (GridLayout) findViewById(R.id.gridRead), read);
+        initChildren(context, (GridLayout) findViewById(R.id.gridSuccess), successful);
+        initChildren(context, (GridLayout) findViewById(R.id.gridFailed), failed);
+    }
 
-        GridView gridUnread = (GridView) findViewById(R.id.gridUnread);
-        gridUnread.setAdapter(new ImageAdapter(this, unread));
-
-        GridView gridRead = (GridView) findViewById(R.id.gridRead);
-        gridRead.setAdapter(new ImageAdapter(this, read));
-
-        GridView gridSuccess = (GridView) findViewById(R.id.gridSuccess);
-        gridSuccess.setAdapter(new ImageAdapter(this, successful));
-
-        GridView gridFailed = (GridView) findViewById(R.id.gridFailed);
-        gridFailed.setAdapter(new ImageAdapter(this, failed));
-
-        for (int[] imgs : images)
+    private void initChildren(Context context, GridLayout grid, int[] imgIds)
+    {
+        for (int imgId : imgIds)
         {
-            for (int img_id : imgs)
-            {
-                ImageView view = (ImageView) findViewById(img_id);
-                view.setOnClickListener(new View.OnClickListener()
-                {
-                    @Override
-                    public void onClick(View view)
-                    {
-                    Intent intent = new Intent(currentView, MailDetail.class);
-                    startActivity(intent);
-                    }
-                });
+            ImageView view = new ImageView(context);
+            view.setImageResource(imgId);
+            view.setLayoutParams(new GridView.LayoutParams(85, 85));
+            view.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            view.setPadding(8, 8, 8, 8);
 
-            }
+            view.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                Intent intent = new Intent(currentView, MailDetail.class);
+                startActivity(intent);
+                }
+            });
+
+            grid.addView(view);
         }
     }
 }

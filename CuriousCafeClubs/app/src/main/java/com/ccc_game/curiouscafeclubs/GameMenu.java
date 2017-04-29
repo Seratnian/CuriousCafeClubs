@@ -28,20 +28,29 @@ public class GameMenu extends AppCompatActivity {
             }
         });
 
-        Button mailsButton = (Button) findViewById(R.id.mailsButton);
-        mailsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(currentView, MailOverview.class);
-                startActivity(intent);
-            }
-        });
-
         Button chatroomsButton = (Button) findViewById(R.id.chatroomsButton);
         chatroomsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(currentView, Calender.class);
+                startActivity(intent);
+            }
+        });
+
+        Button messagesButton = (Button) findViewById(R.id.messagesButton);
+        messagesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(currentView, Messages.class);
+                startActivity(intent);
+            }
+        });
+
+        Button mailsButton = (Button) findViewById(R.id.mailsButton);
+        mailsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(currentView, MailOverview.class);
                 startActivity(intent);
             }
         });
