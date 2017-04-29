@@ -1,8 +1,6 @@
 package com.ccc_game.curiouscafeclubs;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -19,13 +17,11 @@ import android.view.ViewGroup;
 
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class PhoneCalls extends AppCompatActivity {
-    private PhoneCalls currentView = this;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -157,15 +153,15 @@ public class PhoneCalls extends AppCompatActivity {
 
             for (Contact contact : contacts)
             {
-                LinearLayout contactLayout = contact.getLayout();
+                LinearLayout contactLayout = contact.getHorizontalLayout();
                 contactLayout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                    Intent intent = new Intent(getContext(), Messages.class);
+                    Intent intent = new Intent(getContext(), Chat.class);
                     startActivity(intent);
                     }
                 });
-                contactLayout.addView(layout);
+                layout.addView(contactLayout);
             }
 
             return rootView;

@@ -63,5 +63,14 @@ public class GameMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button guestListButton = (Button) findViewById(R.id.guestListButton);
+        guestListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(currentView, GuestList.class);
+                startActivity(intent);
+            }
+        });
     }
 }

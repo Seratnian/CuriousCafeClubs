@@ -3,6 +3,7 @@ package com.ccc_game.curiouscafeclubs;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
@@ -39,7 +40,6 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A Login screen that offers Login via email/password.
  */
 public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> {
-    Login currentView = this;
     /**
      * Id to identity READ_CONTACTS permission request.
      */
@@ -66,6 +66,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final Context context = this;
         setContentView(com.ccc_game.curiouscafeclubs.R.layout.activity_login);
         // Set up the Login form.
         mEmailView = (AutoCompleteTextView) findViewById(com.ccc_game.curiouscafeclubs.R.id.email);
@@ -98,7 +99,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
         guestLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(currentView, MainMenu.class);
+                Intent intent = new Intent(context, MainMenu.class);
                 startActivity(intent);
             }
         });

@@ -1,5 +1,6 @@
 package com.ccc_game.curiouscafeclubs;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,11 +8,11 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class Messages extends AppCompatActivity {
-    Messages currentView = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final Context context = this;
         setContentView(R.layout.activity_messages);
 
         // TODO name Buttons according to clubs
@@ -24,7 +25,7 @@ public class Messages extends AppCompatActivity {
             messagesButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(currentView, Chat.class);
+                    Intent intent = new Intent(context, Chat.class);
                     startActivity(intent);
                 }
             });

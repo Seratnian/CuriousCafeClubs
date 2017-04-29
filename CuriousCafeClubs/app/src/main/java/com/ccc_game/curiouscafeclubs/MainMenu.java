@@ -1,5 +1,6 @@
 package com.ccc_game.curiouscafeclubs;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,11 +11,11 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainMenu extends AppCompatActivity {
-    MainMenu currentView = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final Context context = this;
         setContentView(R.layout.activity_main_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -32,7 +33,7 @@ public class MainMenu extends AppCompatActivity {
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(currentView, GameMenu.class);
+                Intent intent = new Intent(context, GameMenu.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +42,7 @@ public class MainMenu extends AppCompatActivity {
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(currentView, Settings.class);
+                Intent intent = new Intent(context, Settings.class);
                 startActivity(intent);
             }
         });

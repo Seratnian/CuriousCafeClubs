@@ -42,7 +42,8 @@
             android:name=".PhoneCalls"
             android:label="@string/title_activity_phone_calls"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Messages"></activity>
+        <activity android:name=".Messages" />
+        <activity android:name=".GuestList"></activity>
     </application>
 
 </manifest>

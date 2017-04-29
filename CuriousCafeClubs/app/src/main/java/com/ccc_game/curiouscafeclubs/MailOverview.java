@@ -18,7 +18,6 @@ import java.util.Map;
 
 public class MailOverview extends AppCompatActivity
 {
-    MailOverview currentView = this;
     Map<String, List<String>> mails = new LinkedHashMap<String, List<String>>();
 
     @Override
@@ -53,7 +52,7 @@ public class MailOverview extends AppCompatActivity
         initChildren(context, (GridLayout) findViewById(R.id.gridFailed), failed);
     }
 
-    private void initChildren(Context context, GridLayout grid, int[] imgIds)
+    private void initChildren(final Context context, GridLayout grid, int[] imgIds)
     {
         for (int imgId : imgIds)
         {
@@ -68,7 +67,7 @@ public class MailOverview extends AppCompatActivity
                 @Override
                 public void onClick(View view)
                 {
-                Intent intent = new Intent(currentView, MailDetail.class);
+                Intent intent = new Intent(context, MailDetail.class);
                 startActivity(intent);
                 }
             });
