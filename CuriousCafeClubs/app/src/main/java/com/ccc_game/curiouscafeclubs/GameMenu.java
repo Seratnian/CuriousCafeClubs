@@ -77,7 +77,7 @@ public class GameMenu extends AppCompatActivity {
         photosButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(currentView, Gallery.class);
+                Intent intent = new Intent(currentView, AlbumOverview.class);
                 startActivity(intent);
             }
         });
