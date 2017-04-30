@@ -17,11 +17,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class Gallery extends AppCompatActivity
 {
-    final int[] bgImageIds = getResources().getIntArray(R.array.bgImageIds);
+
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -95,7 +94,7 @@ public class Gallery extends AppCompatActivity
          * The fragment argument representing the section number for this
          * fragment.
          */
-        private static final String ARG_IMAGE_ID = "image_id";
+        private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
         }
@@ -104,20 +103,20 @@ public class Gallery extends AppCompatActivity
          * Returns a new instance of this fragment for the given section
          * number.
          */
-        public static PlaceholderFragment newInstance(int imageId) {
+        public static PlaceholderFragment newInstance(int position) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
-            args.putInt(ARG_IMAGE_ID, imageId);
+            args.putInt(ARG_SECTION_NUMBER, position);
             fragment.setArguments(args);
             return fragment;
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_gallery, container, false);
-            ImageView imageView = (ImageView) rootView.findViewById(R.id.image);
-            imageView.setImageResource(getArguments().getInt(ARG_IMAGE_ID));
+            int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
+            ImageView image = (ImageView) rootView.findViewById(R.id.galleryImage);
+            image.setImageDrawable(getResources().obtainTypedArray(R.array.bgImages).getDrawable(sectionNumber));
             return rootView;
         }
     }
@@ -136,18 +135,17 @@ public class Gallery extends AppCompatActivity
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(bgImageIds[position]);
+            return PlaceholderFragment.newInstance(position);
         }
 
         @Override
         public int getCount() {
-            return bgImageIds.length;
+            return getResources().getIntArray(R.array.bgImages).length;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-
-            return null;
+            return "";
         }
     }
 }

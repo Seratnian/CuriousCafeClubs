@@ -61,7 +61,7 @@ public class Contact
         LinearLayout layout = getLayout(context);
         layout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         layout.setGravity(Gravity.CENTER);
-        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.setOrientation(LinearLayout.HORIZONTAL);
 
         TextView name = (TextView) layout.getChildAt(TEXT_ID);
         name.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT, 1f));
