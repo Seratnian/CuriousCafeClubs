@@ -290,6 +290,9 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
         mEmailView.setAdapter(adapter);
     }
 
+    public void onGuestLogin(View view) {
+    }
+
 
     private interface ProfileQuery {
         String[] PROJECTION = {

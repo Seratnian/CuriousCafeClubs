@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class GameMenu extends AppCompatActivity {
     GameMenu currentView = this;
@@ -28,7 +30,7 @@ public class GameMenu extends AppCompatActivity {
             }
         });
 
-        Button chatroomsButton = (Button) findViewById(R.id.chatroomsButton);
+        ImageView chatroomsButton = (ImageView) findViewById(R.id.chatroomsButton);
         chatroomsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +39,7 @@ public class GameMenu extends AppCompatActivity {
             }
         });
 
-        Button messagesButton = (Button) findViewById(R.id.messagesButton);
+        ImageView messagesButton = (ImageView) findViewById(R.id.chatroomsButton);
         messagesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +48,7 @@ public class GameMenu extends AppCompatActivity {
             }
         });
 
-        Button mailsButton = (Button) findViewById(R.id.mailsButton);
+        ImageView mailsButton = (ImageView) findViewById(R.id.mailsButton);
         mailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,7 +57,7 @@ public class GameMenu extends AppCompatActivity {
             }
         });
 
-        Button phoneButton = (Button) findViewById(R.id.phoneButton);
+        ImageView phoneButton = (ImageView) findViewById(R.id.phonesButton);
         phoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +66,7 @@ public class GameMenu extends AppCompatActivity {
             }
         });
 
-        Button guestListButton = (Button) findViewById(R.id.guestListButton);
+        ImageView guestListButton = (ImageView) findViewById(R.id.guestListButton);
         guestListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +75,7 @@ public class GameMenu extends AppCompatActivity {
             }
         });
 
-        Button photosButton = (Button) findViewById(R.id.photosButton);
+        ImageView photosButton = (ImageView) findViewById(R.id.photosButton);
         photosButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

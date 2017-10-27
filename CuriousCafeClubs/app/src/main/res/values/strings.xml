@@ -66,6 +66,7 @@
     <string name="phone">Telefon</string>
     <string name="guestList">Gästeliste</string>
     <string name="photos">Fotos</string>
+    <string name="coffee">Kaffee</string>
     <string name="title_activity_game_menu">GameMenu</string>
 
     <!-- The Mail Screens -->
@@ -222,5 +223,12 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_gallery">Gallery</string>
+
+    <!-- generative content strings -->
+    <string name="avatar_00">avatar_00</string>
+    <string name="avatar_01">avatar_01</string>
+    <string name="avatar_02">avatar_02</string>
+    <string name="avatar_03">avatar_03</string>
+
 
 </resources>

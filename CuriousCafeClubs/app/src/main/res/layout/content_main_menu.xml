@@ -40,3 +40,54 @@
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
+
+
+    <!--
+
+        <LinearLayout
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <Button
+                android:id="@+id/chatroomsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chatrooms"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <Button
+                android:id="@+id/messagesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/messages" />
+
+            <Button
+                android:id="@+id/mailsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mails" />
+
+            <Button
+                android:id="@+id/phoneButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone" />
+
+            <Button
+                android:id="@+id/guestListButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guestList" />
+
+            <Button
+                android:id="@+id/photosButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/photos" />
+        </LinearLayout>
+
+    -->
