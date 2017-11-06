@@ -229,6 +229,10 @@
     <string name="avatar_01">avatar_01</string>
     <string name="avatar_02">avatar_02</string>
     <string name="avatar_03">avatar_03</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 
 </resources>

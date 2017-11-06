@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/albumGrid"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:numColumns="10"
     tools:context="com.ccc_game.curiouscafeclubs.AlbumOverview">
 
-    <GridView
-        android:id="@+id/albumGrid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="2" />
 
-</ScrollView>
+</GridView>

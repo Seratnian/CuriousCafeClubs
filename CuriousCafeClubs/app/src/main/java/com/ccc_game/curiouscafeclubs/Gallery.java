@@ -1,7 +1,5 @@
 package com.ccc_game.curiouscafeclubs;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -17,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Gallery extends AppCompatActivity
 {
@@ -29,40 +28,41 @@ public class Gallery extends AppCompatActivity
      * may be best to switch to a
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
+
+    static final String ARG_SECTION_NUMBER = "sectionNumber";
+    static final String ARG_IMAGE_ARRAY_ID = "imageArrayId";
 
     /**
      * The {@link ViewPager} that will host the section contents.
      */
-    private ViewPager mViewPager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
     }
 
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+
+        int imageArrayId = getIntent().getIntExtra(ARG_IMAGE_ARRAY_ID, 0);
+        int position = getIntent().getIntExtra(ARG_SECTION_NUMBER, 0);
+
+        // Create the adapter that will return a fragment for each primary sections of the activity.
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), imageArrayId);
+
+        // Set up the ViewPager with the sections adapter.
+        ViewPager mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        mViewPager.setCurrentItem(position);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -94,19 +94,20 @@ public class Gallery extends AppCompatActivity
          * The fragment argument representing the section number for this
          * fragment.
          */
-        private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
+
         }
 
         /**
          * Returns a new instance of this fragment for the given section
          * number.
          */
-        public static PlaceholderFragment newInstance(int position) {
+        public static PlaceholderFragment newInstance(int position, int imageArrayId) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, position);
+            args.putInt(ARG_IMAGE_ARRAY_ID, imageArrayId);
             fragment.setArguments(args);
             return fragment;
         }
@@ -116,7 +117,7 @@ public class Gallery extends AppCompatActivity
             View rootView = inflater.inflate(R.layout.fragment_gallery, container, false);
             int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
             ImageView image = (ImageView) rootView.findViewById(R.id.galleryImage);
-            image.setImageDrawable(getResources().obtainTypedArray(R.array.bgImages).getDrawable(sectionNumber));
+            image.setImageDrawable(getResources().obtainTypedArray(getArguments().getInt(ARG_IMAGE_ARRAY_ID)).getDrawable(sectionNumber));
             return rootView;
         }
     }
@@ -126,21 +127,25 @@ public class Gallery extends AppCompatActivity
      * one of the sections/tabs/pages.
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
+        private int imageArrayId;
 
-        public SectionsPagerAdapter(FragmentManager fm) {
+        public SectionsPagerAdapter(FragmentManager fm, int imageArrayId) {
             super(fm);
+
+            this.imageArrayId = imageArrayId;
+            Toast.makeText(Gallery.this, "imageArrayId " + imageArrayId, Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position);
+            return PlaceholderFragment.newInstance(position, imageArrayId);
         }
 
         @Override
         public int getCount() {
-            return getResources().getIntArray(R.array.bgImages).length;
+            return getResources().getIntArray(imageArrayId).length;
         }
 
         @Override

@@ -1,10 +1,12 @@
 package com.ccc_game.curiouscafeclubs;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 
@@ -14,21 +16,21 @@ import android.widget.ListAdapter;
 
 class ImageAdapter extends BaseAdapter {
     private Context context;
-    private int[] images;
+    private TypedArray images;
 
-    public ImageAdapter(Context context, int[] images) {
+    public ImageAdapter(Context context, TypedArray images) {
         this.context = context;
         this.images = images;
     }
 
     @Override
     public int getCount() {
-        return images.length;
+        return images.length();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return images.getDrawable(position);
     }
 
     @Override
@@ -49,7 +51,7 @@ class ImageAdapter extends BaseAdapter {
             imageView = (ImageView) convertView;
         }
 
-        imageView.setImageResource(images[position]);
+        imageView.setImageDrawable(images.getDrawable(position));
         return imageView;
     }
 
