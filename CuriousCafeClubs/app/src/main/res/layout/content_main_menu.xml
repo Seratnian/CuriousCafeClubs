@@ -5,89 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.ccc_game.curiouscafeclubs.MainMenu"
-    tools:showIn="@layout/activity_main_menu">
+    tools:layout_editor_absoluteY="81dp">
 
-    <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+    <fragment
+        android:name="com.ccc_game.curiouscafeclubs.MainMenu"
+        android:id="@+id/main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
-        <Button
-            android:id="@+id/storyButton"
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/story"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/extrasButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/background_light"
-            android:elevation="0dp"
-            android:text="@string/extras"
-            android:textColor="@android:color/darker_gray" />
+            <Button
+                android:id="@+id/extrasButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/background_light"
+                android:elevation="0dp"
+                android:text="@string/extras"
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/storyButton" />
 
-        <Button
-            android:id="@+id/settignsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/settings" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/settingsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/settings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/extrasButton" />
+
+            <Button
+                android:id="@+id/storyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/story"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </fragment>
 
 </android.support.constraint.ConstraintLayout>
-
-
-    <!--
-
-        <LinearLayout
-            android:layout_width="368dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp">
-
-            <Button
-                android:id="@+id/chatroomsButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/chatrooms"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp" />
-
-            <Button
-                android:id="@+id/messagesButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/messages" />
-
-            <Button
-                android:id="@+id/mailsButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/mails" />
-
-            <Button
-                android:id="@+id/phoneButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/phone" />
-
-            <Button
-                android:id="@+id/guestListButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/guestList" />
-
-            <Button
-                android:id="@+id/photosButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/photos" />
-        </LinearLayout>
-
-    -->

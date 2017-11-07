@@ -99,7 +99,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
         guestLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, MainMenu.class);
+                Intent intent = new Intent(context, FrameStatus.class);
                 startActivity(intent);
             }
         });
