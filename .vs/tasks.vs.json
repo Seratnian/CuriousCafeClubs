@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "Task-login",
+      "appliesTo": "cccCordova/platforms/android/assets/www/login.html",
+      "type": "launch"
+    }
+  ]
+}
